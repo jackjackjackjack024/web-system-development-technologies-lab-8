@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby.exe
 require "rbconfig"
 
-exec RbConfig.ruby, File.expand_path("rails", __dir__), "server", *ARGV
+exec RbConfig.ruby, "bin/rails", "server", *ARGV

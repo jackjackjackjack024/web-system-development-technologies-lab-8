@@ -6,12 +6,11 @@ default: &default
 development:
   <<: *default
   database: storage/development.sqlite3
+
 test:
   <<: *default
   database: storage/test.sqlite3
+
 production:
-  adapter: postgresql
-  encoding: unicode
-  max_connections: <%= ENV.fetch("RAILS_MAX_THREADS", 3) %>
-  database: hello_app_production
-  url: <%= ENV["DATABASE_URL"] %>
+  <<: *default
+  database: storage/production.sqlite3

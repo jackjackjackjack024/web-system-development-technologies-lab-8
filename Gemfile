@@ -1,15 +1,23 @@
 source "https://rubygems.org"
-ruby "4.0.7"
 
-gem "rails", "8.1.3.1"
+gem "rails", "~> 8.1.3", ">= 8.1.3.1"
 gem "propshaft"
+gem "sqlite3", ">= 2.1"
 gem "puma", ">= 5.0"
+gem "jbuilder"
+
 gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "bootsnap", require: false
 
 group :development, :test do
-  gem "sqlite3", ">= 2.1"
+  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 end
 
-group :production do
-  gem "pg"
+group :development do
+  gem "web-console"
+end
+
+group :test do
+  gem "capybara"
+  gem "selenium-webdriver"
 end
