@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :microposts
   root "users#index"
   resources :users
   get "hello-world", to: "application#hello_world"
