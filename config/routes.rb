@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root "application#goodbye"
+  resources :users
 
   get "hello-world", to: "application#hello_world"
   get "hello", to: "application#hello"
