@@ -8,6 +8,8 @@ gem "json", "< 3"
 gem "fiddle"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
+gem "bootstrap-sass", "3.4.1", require: false
+gem "dartsass-rails"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -19,6 +21,7 @@ end
 
 group :test do
   gem "minitest", "~> 5.0"
+  gem "rails-controller-testing"
   gem "minitest-reporters", "~> 1.8"
   gem "guard", "~> 2.19", require: false
   gem "guard-minitest", "~> 2.4", require: false
